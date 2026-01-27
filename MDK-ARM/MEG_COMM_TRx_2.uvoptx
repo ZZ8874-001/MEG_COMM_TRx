@@ -17,7 +17,7 @@
 		<dwHighDateTime>0</dwHighDateTime>
 	</DaveTm>
 	<Target>
-		<TargetName>MEG_COMM_TRx</TargetName>
+		<TargetName>MEG_COMM_TRx_2</TargetName>
 		<ToolsetNumber>0x4</ToolsetNumber>
 		<ToolsetName>ARM-ADS</ToolsetName>
 		<TargetOption>

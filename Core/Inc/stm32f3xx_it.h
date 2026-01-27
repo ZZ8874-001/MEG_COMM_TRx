@@ -1,13 +1,12 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
+  * @file    stm32f3xx_it.h
+  * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -19,15 +18,12 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef __STM32F3xx_IT_H
+#define __STM32F3xx_IT_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/* Includes ------------------------------------------------------------------*/
-#include "stm32f3xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -49,45 +45,22 @@ extern "C" {
 
 /* USER CODE END EM */
 
-void HAL_HRTIM_MspPostInit(HRTIM_HandleTypeDef *hhrtim);
-
 /* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
-
+void NMI_Handler(void);
+void HardFault_Handler(void);
+void MemManage_Handler(void);
+void BusFault_Handler(void);
+void UsageFault_Handler(void);
+void SVC_Handler(void);
+void DebugMon_Handler(void);
+void PendSV_Handler(void);
+void SysTick_Handler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
-
-/* Private defines -----------------------------------------------------------*/
-#define ANODE_Pin GPIO_PIN_0
-#define ANODE_GPIO_Port GPIOA
-#define CATHODE_Pin GPIO_PIN_1
-#define CATHODE_GPIO_Port GPIOA
-#define DEC_P_Pin GPIO_PIN_4
-#define DEC_P_GPIO_Port GPIOA
-#define DEC_N_Pin GPIO_PIN_5
-#define DEC_N_GPIO_Port GPIOA
-#define DIM3_Pin GPIO_PIN_6
-#define DIM3_GPIO_Port GPIOA
-#define IND2_Pin GPIO_PIN_12
-#define IND2_GPIO_Port GPIOB
-#define IND1_Pin GPIO_PIN_13
-#define IND1_GPIO_Port GPIOB
-#define DIM1_1_Pin GPIO_PIN_9
-#define DIM1_1_GPIO_Port GPIOA
-#define DIM1_2_Pin GPIO_PIN_11
-#define DIM1_2_GPIO_Port GPIOA
-#define DIM2_Pin GPIO_PIN_6
-#define DIM2_GPIO_Port GPIOB
-#define DEC_PB7_Pin GPIO_PIN_7
-#define DEC_PB7_GPIO_Port GPIOB
-
-/* USER CODE BEGIN Private defines */
-
-/* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __MAIN_H */
+#endif /* __STM32F3xx_IT_H */
