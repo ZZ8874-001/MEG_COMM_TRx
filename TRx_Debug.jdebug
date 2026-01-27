@@ -5,7 +5,7 @@
 **********************************************************************
 
 File          : 
-Created       : 27. Jan 2026 14:40
+Created       : 27. Jan 2026 14:56
 Ozone Version : V3.40e
 */
 
@@ -22,8 +22,8 @@ void OnProjectLoad (void) {
   //
   // Dialog-generated settings
   //
-  Project.AddPathSubstitute ("C:/Users/Shuchen Tao/Documents/MEG_COMM_TRx_2", "$(ProjectDir)");
-  Project.AddPathSubstitute ("c:/users/shuchen tao/documents/meg_comm_trx_2", "$(ProjectDir)");
+  Project.AddPathSubstitute ("C:/Users/Shuchen Tao/Documents/MEG_COMM_TRx", "$(ProjectDir)");
+  Project.AddPathSubstitute ("c:/users/shuchen tao/documents/meg_comm_trx", "$(ProjectDir)");
   Project.SetDevice ("STM32F334C8");
   Project.SetHostIF ("USB", "");
   Project.SetTargetIF ("SWD");
